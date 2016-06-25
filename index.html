@@ -1,39 +1,68 @@
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Angular Material style sheet -->
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet"
+          href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
 </head>
 <body ng-app="BlankApp" ng-cloak>
-  <!--
-    Your HTML content here
-  -->  
-  
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+<!--
+  Your HTML content here
+-->
 
-  <!-- Angular Material Library -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-  
-  <!-- Your application bootstrap  -->
-  <script type="text/javascript">    
+<div layout="column" max-width='100%' height='100%'>
+
+    <div flex layout="row" layout-align="start" class='header'>
+        <!--<div>logo</div>-->
+        <div class='md-title'>Maple Design Studio</div>
+    </div>
+
+    <div flex='70' layout="row" layout-xs="column" layout-align="space-around start">
+        <div flex layout-padding='10'>Product 1</div>
+        <div flex layout-padding='10'>Product 2</div>
+    </div>
+
+    <div flex='10' layout="row" layout-align="center end">
+        <div flex>Description</div>
+    </div>
+
+    <div flex='10' layout="row" layout-align="center end">
+        <div flex>Footer</div>
+    </div>
+
+</div>
+
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+<!-- Your application bootstrap  -->
+<script type="text/javascript">
     /**
-     * You must include the dependency on 'ngMaterial' 
+     * You must include the dependency on 'ngMaterial'
      */
     angular.module('BlankApp', ['ngMaterial']);
-  </script>
-  
-<div layout="row">
-  <div flex>First item in row</div>
-  <div flex>Second item in row</div>
-</div>
-<div layout="column">
-  <div flex>First item in column</div>
-  <div flex>Second item in column</div>
-</div>
+</script>
+
+<style>
+    .header{
+        border-color: darkgray !important;
+        border-bottom-width: 1px;
+        border-bottom-style: double;
+        padding: 13px;
+        min-height: 52px !important;
+    }
+
+    .footer{
+        min-height: 100px !important;
+    }
+</style>
 
 </body>
 </html>
