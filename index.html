@@ -2,66 +2,70 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Angular Material style sheet -->
+
+    <script src="https://use.fontawesome.com/5de8c49ba3.js"></script>
+
     <link rel="stylesheet"
           href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.min.css">
 </head>
+
 <body ng-app="BlankApp" ng-cloak>
 <!--
   Your HTML content here
 -->
 
-<div layout="column" max-width='100%' height='100%'>
+<div layout='row' max-width='100%' height='100%'>
 
-    <div flex layout="row" layout-align="start" class='header'>
-        <div class='logo'>
-            <img src="http://free-range.org.uk/images/images/22598.jpg" alt="Maple" width='43px'>
-        </div>
-        <div class='md-title name'>Maple Design Studio</div>
-    </div>
-
-    <div flex='80' layout="row" layout-xs="column" layout-align="space-around start">
-        <div flex>
-            <div id="home-left" class="owl-carousel owl-theme">
-
-                <div class="item"><img src="https://static.pexels.com/photos/20974/pexels-photo.jpg"
-                                       alt="The Last of us"></div>
-                <div class="item"><img
-                        src="https://s-media-cache-ak0.pinimg.com/736x/a4/32/b9/a432b9e6a4d0d9c7730d8d4a5f8b4bca.jpg"
-                        alt="GTA V"></div>
-                <div class="item"><img
-                        src="http://www.ufunk.net/wp-content/uploads/2016/01/ValentinValkov-2.jpg"
-                        alt="Mirror Edge"></div>
-
-            </div>
-        </div>
-        <div flex>
-            <div id="home-right" class="owl-carousel owl-theme">
-
-                <div class="item"><img src="https://static.pexels.com/photos/20974/pexels-photo.jpg"
-                                       alt="The Last of us"></div>
-                <div class="item"><img
-                        src="https://s-media-cache-ak0.pinimg.com/736x/a4/32/b9/a432b9e6a4d0d9c7730d8d4a5f8b4bca.jpg"
-                        alt="GTA V"></div>
-                <div class="item"><img
-                        src="http://www.ufunk.net/wp-content/uploads/2016/01/ValentinValkov-2.jpg"
-                        alt="Mirror Edge"></div>
-
+    <div flex layout="row" layout-align="start" class='' width="50%">
+        <div class='name'>
+            <div layout="column">
+                <div class='md-title'>MAPLE</div>
+                <div class='md-caption caption'>a design studio</div>
             </div>
 
+
+            <div flex layout="row" class='footer'>
+
+                <a href="tel:+919742395094"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                    <a href="mailto:manojs.nitt@gmail.com" target="_top"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/mapledesignstudio" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </div>
         </div>
+
     </div>
 
-    <!--<div flex='10' layout="row" layout-align="center end">-->
-        <!--<div flex>Description</div>-->
-    <!--</div>-->
+    <div flex layout="row" layout-align="start" width="50%" height='100%'>
 
-    <!--<div flex='10' layout="row" layout-align="center end">-->
-        <!--<div flex>Footer</div>-->
-    <!--</div>-->
+        <!--<div layout="column">-->
+        <!--<div class='md-title name'>MAPLE</div>-->
+        <!--<div class='md-caption caption'>a design studio</div>-->
+        <!--</div>-->
+
+        <div id="home-left" class="owl-carousel owl-theme">
+            <div class="item">
+                <img
+                        src="http://id3d.idesign.pt/wp-content/uploads/2016/02/1615_RPR_Deloitte_Cam_01a_Warm-640x720.jpg"
+                        alt="The Last of us">
+            </div>
+            <div class="item">
+                <img
+                        src="https://marisajanusz.files.wordpress.com/2017/03/837a1317b.jpg?w=640"
+                        alt="GTA V">
+            </div>
+            <div class="item">
+                <img
+                        src="https://www.bmr.co/media/wysiwyg/conseils_design/25-conseils-tva/BMR_D03_2013-640X720px.jpg"
+                        alt="GTA V">
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -89,7 +93,7 @@
 
     $(document).ready(function () {
 
-        $("#home-left, #home-right").owlCarousel({
+        $("#home-left").owlCarousel({
 
             navigation: true, // Show next and prev buttons
             slideSpeed: 300,
@@ -97,8 +101,10 @@
             singleItem: true,
             autoPlay: true,
             navigationText: false,
-            lazyLoad: true,
-            stopOnHover: true
+            lazyLoad: false,
+            stopOnHover: true,
+            rewindNav: true,
+            transitionStyle : "fade"
 
             // "singleItem:true" is a shortcut for:
             // items : 1,
@@ -114,47 +120,67 @@
 
 <style>
 
-    .body {
+    body {
         color: #222;
         padding: 0;
         margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+        /*font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;*/
+        font-family: 'Raleway', sans-serif;
         font-weight: 400;
         font-style: normal;
-        line-height: 1.5;
+        /*line-height: 1.5;*/
         position: relative;
         cursor: auto;
-    }
 
-    .header {
-        border-color: darkgray !important;
-        border-bottom-width: 1px;
-        border-bottom-style: double;
-        /*padding: 13px;*/
-        min-height: 52px !important;
-    }
-
-    .name {
-        padding: 13px 13px 13px 0px !important;
-    }
-
-    .logo {
-        padding: 5px !important;
+        text-align: center;
     }
 
     .footer {
-        min-height: 100px !important;
+        position: absolute;
+        /*right: 0;*/
+        bottom: 0;
+        /*left: 0;*/
+        font-size: 13px;
+        color: #4B4B4B;
+        text-align: center;
+        height: 25px;
+    }
+
+    .footer a, .footer i {
+        color: #4B4B4B;
+    }
+
+    .footer a:hover, .footer i:hover{
+        /*font-size: 15px;*/
+        color: black;
+    }
+
+    .footer .fa {
+        margin-left: 12px;
+    }
+
+    .md-title {
+        font-size: 23px;
+    }
+
+    .name {
+        padding: 43%;
+    }
+
+    .name div {
+        width: 100px;
+    }
+
+    .caption {
+        font-weight: bold;
+        font-size: 10px;
     }
 
     .item {
-        height: 70%;
+        height: 95%;
         width: 100%;
     }
 
-    <!--
-    OWL Override
-
-    -->
     #owl-demo .item img {
         display: block;
         width: 100%;
@@ -170,7 +196,7 @@
         padding-right: 10px;
     }
 
-    .owl-buttons{
+    .owl-buttons {
         display: none;
     }
 
