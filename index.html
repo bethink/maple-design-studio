@@ -19,27 +19,57 @@
   Your HTML content here
 -->
 
-<div layout='row' max-width='100%' height='100%'>
+<!--Caption-->
+<!--Where you find quality, you will find a craftsman-->
+<!--Bringing Furniture You Love. With Love.-->
 
-    <div flex layout="row" layout-align="start" class='' width="50%">
+<div layout='row' layout-xs='column' layout-wrap max-width='100%'>
+
+    <div flex layout="column"  layout-align="center" flex-xs="100" flex="50">
+
+
         <div class='name'>
-            <div layout="column">
+
+            <div layout="column" layout-align="center">
+                <div class='logo'>
+                        <a href="/">
+                            <!--<img src="file:///Users/ksmanoj/Desktop/Screen%20Shot%202017-07-04%20at%204.48.32%20PM.png" alt="Maple" width='70px'>-->
+                            <img src="file:///Users/ksmanoj/Documents/RailsApplications/maple-design-studio/images/maple-leaf.png" alt="Maple" width='70px'>
+                        </a>
+                </div>
                 <div class='md-title'>MAPLE</div>
                 <div class='md-caption caption'>a design studio</div>
             </div>
 
 
-            <div flex layout="row" class='footer'>
-
-                <a href="tel:+919742395094"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                    <a href="mailto:manojs.nitt@gmail.com" target="_top"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                    <a href="https://www.facebook.com/mapledesignstudio" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            </div>
         </div>
 
+        <div class='salesPartners' flex layout='row' layout-align="center center">
+            <div>Flipkart</div>
+            <div>Pepperfry</div>
+            <div>Amazon</div>
+            <div>Paytm</div>
+        </div>
+
+        <div flex layout="row" class='footer'>
+
+            <a href="tel:+919742395094"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            <a href="mailto:manojs.nitt@gmail.com" target="_top"><i class="fa fa-envelope"
+                                                                    aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/mapledesignstudio" target="_blank"><i class="fa fa-facebook"
+                                                                                    aria-hidden="true"></i></a>
+
+            <!--<div class="fb-messengermessageus"-->
+            <!--messenger_app_id="APP_ID"-->
+            <!--page_id="PAGE_ID"-->
+            <!--color="blue"-->
+            <!--size="standard">-->
+            <!--sdf-->
+            <!--</div>-->
+        </div>
     </div>
 
-    <div flex layout="row" layout-align="start" width="50%" height='100%'>
+    <div flex layout="row" layout-align="start" flex-xs="100" flex="50">
 
         <!--<div layout="column">-->
         <!--<div class='md-title name'>MAPLE</div>-->
@@ -104,7 +134,7 @@
             lazyLoad: false,
             stopOnHover: true,
             rewindNav: true,
-            transitionStyle : "fade"
+            transitionStyle: "fade"
 
             // "singleItem:true" is a shortcut for:
             // items : 1,
@@ -116,6 +146,29 @@
         });
 
     });
+
+
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: "APP_ID",
+            xfbml: true,
+            version: "v2.6"
+        });
+
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
 </script>
 
 <style>
@@ -150,7 +203,7 @@
         color: #4B4B4B;
     }
 
-    .footer a:hover, .footer i:hover{
+    .footer a:hover, .footer i:hover {
         /*font-size: 15px;*/
         color: black;
     }
@@ -164,11 +217,21 @@
     }
 
     .name {
-        padding: 43%;
+        /*padding: 43%;*/
+        margin-top: 20%;
     }
 
     .name div {
-        width: 100px;
+        /*width: 100px;*/
+    }
+
+    .salesPartners{
+        margin: 10px;
+
+    }
+
+    .salesPartners div{
+        margin: 10px;
     }
 
     .caption {
